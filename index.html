@@ -84,7 +84,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="" target="_blank"
+                    <a href="https://anonymous.4open.science/r/Anonymous_AAAI2026_24406/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -119,13 +119,16 @@
         <!-- 替换为你提取的 PDF 图像路径 -->
         <img src="static/images/pipeline.png" alt="Extracted from PDF" style="max-width: 70%; height: auto;" />
         <h2 class="subtitle has-text-centered">
-          <p>
+          <div class="content has-text-justified">
+            <p>
             framework of SinglePro. The pipeline consists of three main modules. The 2D semantic extraction module re-
 constructs a Gaussian scene, extracts multi-view semantic features, and performs semantic alignment across views. The 3D
 Gaussian semantic field reconstruction module establishes a mapping between 2D semantic IDs and 3D Gaussian points. The
 open-vocabulary segmentation module generates pseudo masks using a 2D foundation model and determines the optimal thresh-
 old via Linear Programming (LP) to produce the final masks.
           </p>
+          </div>
+          
         </h2>
       </div>
     </div>
@@ -177,8 +180,10 @@ for effective semantic association.
         <!-- 替换为你提取的 PDF 图像路径 -->
         <img src="static/images/3dovs.png" alt="Extracted from PDF" style="max-width: 70%; height: auto;" />
         <h2 class="subtitle has-text-centered">
-          <p>visualization comparisons of open-vocabulary querying results on the 3DOVS dataset. The last row shows a failure
+          <div class="content has-text-justified">
+                      <p>visualization comparisons of open-vocabulary querying results on the 3DOVS dataset. The last row shows a failure
 case, in which SinglePro produces a segmentation mask with holes, while LEGau fails to segment the grey sofa entirely.</p>
+          </div>
         </h2>
       </div>
     </div>
