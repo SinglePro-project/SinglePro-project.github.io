@@ -111,31 +111,6 @@
   </div>
 </section>
 
-<!-- Single Image Display with Caption -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class="image-container has-text-centered">
-        <!-- 替换为你提取的 PDF 图像路径 -->
-        <img src="static/images/pipeline.png" alt="Extracted from PDF" style="max-width: 70%; height: auto;" />
-        <h2 class="subtitle has-text-centered">
-          <div class="content has-text-justified">
-            <p>
-            framework of SinglePro. The pipeline consists of three main modules. The 2D semantic extraction module re-
-constructs a Gaussian scene, extracts multi-view semantic features, and performs semantic alignment across views. The 3D
-Gaussian semantic field reconstruction module establishes a mapping between 2D semantic IDs and 3D Gaussian points. The
-open-vocabulary segmentation module generates pseudo masks using a 2D foundation model and determines the optimal thresh-
-old via Linear Programming (LP) to produce the final masks.
-          </p>
-          </div>
-          
-        </h2>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End single image display -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -144,26 +119,7 @@ old via Linear Programming (LP) to produce the final masks.
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In recent years, 3D Gaussian Splatting (3DGS) has emerged
-as a popular and efficient 3D representation method for
-the display and reconstruction of complex scenes. However,
-cross-view inconsistency and the inherent mismatch between
-the dimensional complexity of high-dimensional semantic
-features and the spatial structure of 3D scenes make it chal-
-lenging to encode semantic information into 3D scene repre-
-sentations. As a solution to these challenges, we propose Sin-
-glePro, a training-free 2D-to-3D semantic mapping frame-
-work based on geometric projection, which requires only a
-Single Projection to achieve effective mapping. SinglePro
-leverages a pre-trained 2D vision foundation model to extract
-cross-view semantic features and assigns a unique identifier
-to each semantic entity in the scene. Furthermore, by utiliz-
-ing camera geometry obtained during the 3D reconstruction
-stage, the framework establishes a direct mapping between
-the aligned 2D semantic features and multi-view 3D Gaus-
-sian points. This approach enables lightweight and efficient
-semantic assignment by leveraging object IDentifiers (IDs)
-for effective semantic association. 
+            In recent years, 3D Gaussian Splatting (3DGS) has become a powerful method for reconstructing and visualizing complex scenes. However, challenges remain in integrating semantic information due to cross-view inconsistencies and the mismatch between high-dimensional semantic features and the 3D spatial structure. To address this, we propose SinglePro, a training-free 2D-to-3D semantic mapping framework based on geometric projection. With just a single projection, SinglePro uses a pre-trained 2D vision foundation model to extract semantic features and assigns a unique ID to each semantic entity. Leveraging camera parameters from the 3D reconstruction stage, it directly maps the aligned 2D semantics to multi-view 3D Gaussian points, enabling lightweight and efficient semantic labeling.
           </p>
         </div>
       </div>
@@ -177,14 +133,45 @@ for effective semantic association.
   <div class="hero-body">
     <div class="container">
       <div class="image-container has-text-centered">
-        <!-- 替换为你提取的 PDF 图像路径 -->
+        <h2 class="title is-3">Pipeline Overview</h2>
+        
+        <!-- 图片展示 -->
+        <img src="static/images/pipeline.png" alt="Extracted from PDF" style="max-width: 70%; height: auto;" />
+
+        <!-- 内容段落 -->
+        <div class="content" style="max-width: 70%; margin: 0 auto; text-align: justify;">
+          <p>
+            The framework of SinglePro consists of three main modules. The 2D semantic extraction module reconstructs a Gaussian scene, extracts multi-view semantic features, and performs semantic alignment across views. The 3D Gaussian semantic field reconstruction module establishes a mapping between 2D semantic IDs and 3D Gaussian points. The open-vocabulary segmentation module generates pseudo masks using a 2D foundation model and determines the optimal threshold via Linear Programming (LP) to produce the final masks.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End single image display -->
+
+
+<!-- Single Image Display with Caption -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="image-container has-text-centered">
+        <h2 class="title is-3">Pipeline Overview</h2>
+        
+        <!-- 图片展示 -->
         <img src="static/images/3dovs.png" alt="Extracted from PDF" style="max-width: 70%; height: auto;" />
-        <h2 class="subtitle has-text-centered">
-          <div class="content has-text-justified">
-                      <p>visualization comparisons of open-vocabulary querying results on the 3DOVS dataset. The last row shows a failure
-case, in which SinglePro produces a segmentation mask with holes, while LEGau fails to segment the grey sofa entirely.</p>
-          </div>
-        </h2>
+
+        <!-- 内容段落 -->
+        <div class="content" style="max-width: 70%; margin: 0 auto; text-align: justify;">
+          <p>
+            visualization comparisons of open-vocabulary querying results on the 3DOVS dataset. The last row shows a failure
+case, in which SinglePro produces a segmentation mask with holes, while LEGau fails to segment the grey sofa entirely.
+          </p>
+        </div>
+        
       </div>
     </div>
   </div>
